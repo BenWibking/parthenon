@@ -175,6 +175,7 @@ add_library(parthenon
   outputs/history.cpp
   outputs/io_wrapper.cpp
   outputs/io_wrapper.hpp
+  outputs/openPMD.cpp
   outputs/output_utils.cpp
   outputs/output_utils.hpp
   outputs/outputs.cpp

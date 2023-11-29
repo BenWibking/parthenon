@@ -186,6 +186,17 @@ class AscentOutput : public OutputType {
   ParArray1D<Real> ghost_mask_;
 };
 
+//----------------------------------------------------------------------------------------
+//! \class OpenPMDOutput
+//  \brief derived OutputType class for OpenPMD
+
+class OpenPMDOutput : public OutputType {
+ public:
+  explicit OpenPMDOutput(const OutputParameters &oparams) : OutputType(oparams) {}
+  void WriteOutputFile(Mesh *pm, ParameterInput *pin, SimTime *tm,
+                       const SignalHandler::OutputSignal signal) override;
+};
+
 #ifdef ENABLE_HDF5
 //----------------------------------------------------------------------------------------
 //! \class PHDF5Output
